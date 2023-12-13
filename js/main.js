@@ -1,9 +1,41 @@
-window.addEventListener('load', iniciarJuego);//evento para escuchar cuando el navegador esta cargado al 100%
-
+let ataqueJugador 
 
 function iniciarJuego() {
-    var btnPetserker = document.getElementById('btn-petserker');
+    let btnPetserker = document.getElementById('btn-petserker');
     btnPetserker.addEventListener('click', sleccionarPetserkerJugador);
+
+    let btn_fuego = document.getElementById('btn-fuego');
+    btn_fuego.addEventListener('click', ataqueFuego);
+
+    let btn_agua = document.getElementById('btn-agua');
+    btn_agua.addEventListener('click', ataqueAgua);
+
+    let btn_tierra = document.getElementById('btn-tierra');
+    btn_tierra.addEventListener('click', ataqueTierra);
+
+    let btn_viento = document.getElementById('btn-viento');
+    btn_viento.addEventListener('click', ataqueViento);
+
+};
+
+function ataqueFuego(){
+    ataqueJugador = 'FUEGO';
+    alert(ataqueJugador);
+};
+
+function ataqueAgua(){
+    ataqueJugador = 'AGUA';
+    alert(ataqueJugador);
+};
+
+function ataqueTierra(){
+    ataqueJugador = 'TIERRA';
+    alert(ataqueJugador);
+};
+
+function ataqueViento(){
+    ataqueJugador = 'VIENTO';
+    alert(ataqueJugador);
 };
 
 function sleccionarPetserkerJugador() {
@@ -33,20 +65,20 @@ function sleccionarPetserkerJugador() {
     else if (minihen.checked) {
         petserkerJugador.innerHTML = listaPetserkers(5);
     } else {
-        alert('selecciona un petserker 🤬')
-    }
+        return alert('selecciona un petserker 🐉');
+    };
 
     seleccionPetserkerEnemigo();
 };
 
 function seleccionPetserkerEnemigo() {
     const petserkerEnemiga = document.getElementById('PetserkerEnemiga');
-    var petserkerAleatorio = aleatorio(6, 1)
+    let petserkerAleatorio = aleatorio(6, 1)
     if (petserkerAleatorio == 6) {
         petserkerAleatorio = 0;
-        petserkerEnemiga.innerHTML= listaPetserkers(petserkerAleatorio);
+        petserkerEnemiga.innerHTML= 'enemiga es ' + listaPetserkers(petserkerAleatorio);
     }else{
-        petserkerEnemiga.innerHTML= listaPetserkers(petserkerAleatorio);
+        petserkerEnemiga.innerHTML= 'enemiga es ' + listaPetserkers(petserkerAleatorio);
     }
 };
 
@@ -58,4 +90,7 @@ function aleatorio(max, min) {
 function listaPetserkers(num) {
     var petserkers = ['cropo', 'lunetai', 'plichustan', 'floki', 'yinyin', 'minihen'];
     return petserkers[num];
-}
+}; 
+
+
+window.addEventListener('load', iniciarJuego);//evento para escuchar cuando el navegador esta cargado al 100%
