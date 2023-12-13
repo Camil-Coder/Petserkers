@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petserkers!</title>
+    <script src="./js/main.js" defer></script>
 </head>
 
 <body>
@@ -14,26 +15,26 @@
 
         <h2>Elige tu mascota: </h2>
 
-        <label for="cropo" >cropo</label>
-        <input type="radio" id="cropo" name="Petserker" />
+        <label for="cropo" >cropo</label> <!-- agua -->
+        <input type="radio" id="cropo" name="Petserkers" />
 
-        <label for="lunetai" >lunetai</label>
-        <input type="radio" id="lunetai" name="Petserker" />
+        <label for="lunetai" >lunetai</label><!-- tierrra -->
+        <input type="radio" id="lunetai" name="Petserkers" />
 
-        <label for="plichustan" >plichustan</label>
-        <input type="radio" id="plichustan" name="Petserker" />
+        <label for="plichustan" >plichustan</label><!-- fuego-->
+        <input type="radio" id="plichustan" name="Petserkers" />
 
-        <label for="floki" >floki</label>
-        <input type="radio" id="floki" name="Petserker" />
+        <label for="floki" >floki</label><!-- viento -->
+        <input type="radio" id="floki" name="Petserkers" />
 
-        <label for="yinyin" >yinyin</label>
-        <input type="radio" id="yinyin" name="Petserker" />
+        <label for="yinyin" >yinyin</label><!-- viento-fuego-->
+        <input type="radio" id="yinyin" name="Petserkers" />
 
-        <label for="minihen" >minihen</label>
-        <input type="radio" id="minihen" name="Petserker" />
+        <label for="minihen" >minihen</label><!-- agua-tierra -->
+        <input type="radio" id="minihen" name="Petserkers" />
 
 
-        <button>seleccionar</button>
+        <button id="btn-petserker" >seleccionar</button>
 
     </section>
 
@@ -41,14 +42,14 @@
 
         <h2>Elige tu ataque: </h2>
 
-        <p>Tu mascota tiene <span>3</span> vidas</p>
-        <p>La mascota enemiga tiene <span>3</span> vidas</p>
+        <p>Tu Petserker tiene <span>3</span> vidas</p>
+        <p>La Petserker enemiga tiene <span>3</span> vidas</p>
 
         <p>
-            <button>Fuego🔥</button>
-            <button>Agua💧</button>
-            <button>Tierra🌱</button>
-            <button>Viento🌪️</button>
+            <button id="btn-fuego" >Fuego🔥</button>
+            <button id="btn-agua" >Agua💧</button>
+            <button id="btn-tierra" >Tierra🌱</button>
+            <button id="btn-viento" >Viento🌪️</button>
         </p>
 
     </section>
@@ -61,7 +62,7 @@
 
     <section id="reiniciar">
 
-        <button>Reiniciar</button>
+        <button  id="btn-reinicio" >Reiniciar</button>
 
     </section>
 
