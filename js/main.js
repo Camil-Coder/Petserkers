@@ -1,44 +1,14 @@
-let ataqueJugador 
+let ataqueJugador;
+let ataqueEnemigo;
+
 
 function iniciarJuego() {
     let btnPetserker = document.getElementById('btn-petserker');
     btnPetserker.addEventListener('click', sleccionarPetserkerJugador);
-
-    let btn_fuego = document.getElementById('btn-fuego');
-    btn_fuego.addEventListener('click', ataqueFuego);
-
-    let btn_agua = document.getElementById('btn-agua');
-    btn_agua.addEventListener('click', ataqueAgua);
-
-    let btn_tierra = document.getElementById('btn-tierra');
-    btn_tierra.addEventListener('click', ataqueTierra);
-
-    let btn_viento = document.getElementById('btn-viento');
-    btn_viento.addEventListener('click', ataqueViento);
-
-};
-
-function ataqueFuego(){
-    ataqueJugador = 'FUEGO';
-    alert(ataqueJugador);
-};
-
-function ataqueAgua(){
-    ataqueJugador = 'AGUA';
-    alert(ataqueJugador);
-};
-
-function ataqueTierra(){
-    ataqueJugador = 'TIERRA';
-    alert(ataqueJugador);
-};
-
-function ataqueViento(){
-    ataqueJugador = 'VIENTO';
-    alert(ataqueJugador);
 };
 
 function sleccionarPetserkerJugador() {
+    let estado;
     const cropo = document.getElementById('cropo');
     const lunetai = document.getElementById('lunetai');
     const plichustan = document.getElementById('plichustan');
@@ -65,10 +35,16 @@ function sleccionarPetserkerJugador() {
     else if (minihen.checked) {
         petserkerJugador.innerHTML = listaPetserkers(5);
     } else {
-        return alert('selecciona un petserker 🐉');
+        return (
+            estado = false,
+            alert('selecciona un petserker 🐉')
+        );
     };
-
     seleccionPetserkerEnemigo();
+    estado = true;
+    if( estado = true){
+        ataqueFuego()
+    }
 };
 
 function seleccionPetserkerEnemigo() {
@@ -76,21 +52,60 @@ function seleccionPetserkerEnemigo() {
     let petserkerAleatorio = aleatorio(6, 1)
     if (petserkerAleatorio == 6) {
         petserkerAleatorio = 0;
-        petserkerEnemiga.innerHTML= 'enemiga es ' + listaPetserkers(petserkerAleatorio);
-    }else{
-        petserkerEnemiga.innerHTML= 'enemiga es ' + listaPetserkers(petserkerAleatorio);
+        petserkerEnemiga.innerHTML = 'es ' + listaPetserkers(petserkerAleatorio);
+    } else {
+        petserkerEnemiga.innerHTML = 'es ' + listaPetserkers(petserkerAleatorio);
     }
 };
 
 function aleatorio(max, min) {
-    let resultado = 0;
     return resultado = Math.floor(Math.random() * (max - min + 1) + 1);
 }
 
 function listaPetserkers(num) {
     var petserkers = ['cropo', 'lunetai', 'plichustan', 'floki', 'yinyin', 'minihen'];
     return petserkers[num];
-}; 
+};
 
+/* ataques de petserkers */
+function ataqueFuego() {
+    ataqueJugador = listaAtaquesPetserkers(0);
+    alert(`arremetes con un ataque tipo ${ataqueJugador}`);
+    alert(`El petserker enemigo responde con ${listaAtaquesPetserkers(ataquePetserkerEnemiga())}`);
+};
+
+function ataqueAgua() {
+    ataqueJugador = listaAtaquesPetserkers(1);
+    alert(`arremetes con un ataque tipo ${ataqueJugador}`);
+    alert(`El petserker enemigo responde con ${listaAtaquesPetserkers(ataquePetserkerEnemiga())}`);
+};
+
+function ataqueTierra() {
+    ataqueJugador = listaAtaquesPetserkers(2);
+    alert(`arremetes con un ataque tipo ${ataqueJugador}`);
+    alert(`El petserker enemigo responde con ${listaAtaquesPetserkers(ataquePetserkerEnemiga())}`);
+};
+
+function ataqueViento() {
+    ataqueJugador = listaAtaquesPetserkers(3);
+    alert(`arremetes con un ataque tipo ${ataqueJugador}`);
+    alert(`El petserker enemigo responde con ${listaAtaquesPetserkers(ataquePetserkerEnemiga())}`);
+};
+
+
+function listaAtaquesPetserkers(numListaAtaques) {
+    let ataques = ['FUEGO','AGUA','TIERRA','VIENTO'];
+    return ataques[numListaAtaques];
+}
+
+
+function ataquePetserkerEnemiga() {
+    let resultado = aleatorio(4,1);
+    if (resultado == 4){
+        return resultado = 0;
+    }else{
+        return resultado;
+    }
+};
 
 window.addEventListener('load', iniciarJuego);//evento para escuchar cuando el navegador esta cargado al 100%
