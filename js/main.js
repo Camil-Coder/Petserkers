@@ -1,6 +1,9 @@
 //variables globales
 let ataqueJugador;
 let ataqueEnemigo;
+let estadoSeleccionPetserker;
+let resultadoCombate;
+
 
 //Arrays
 function listaPetserkers(num) {
@@ -8,7 +11,7 @@ function listaPetserkers(num) {
     return petserkers[num];
 };
 function listaAtaquesPetserkers(numListaAtaques) {
-    let ataques = ['FUEGO', 'AGUA', 'TIERRA', 'VIENTO'];
+    let ataques = ['FUEGO🔥', 'AGUA💧', 'TIERRA🌱', 'VIENTO🌪️'];
     return ataques[numListaAtaques];
 }
 //Aleatoriedad
@@ -45,25 +48,31 @@ function sleccionarPetserkerJugador() {
 
     if (cropo.checked) {
         petserkerJugador.innerHTML = listaPetserkers(0);
+        estadoSeleccionPetserker = true;
     }
     else if (lunetai.checked) {
         petserkerJugador.innerHTML = listaPetserkers(1);
+        estadoSeleccionPetserker = true;
     }
     else if (plichustan.checked) {
         petserkerJugador.innerHTML = listaPetserkers(2);
+        estadoSeleccionPetserker = true;
     }
     else if (floki.checked) {
         petserkerJugador.innerHTML = listaPetserkers(3);
+        estadoSeleccionPetserker = true;
     }
     else if (yinyin.checked) {
         petserkerJugador.innerHTML = listaPetserkers(4);
+        estadoSeleccionPetserker = true;
     }
     else if (minihen.checked) {
         petserkerJugador.innerHTML = listaPetserkers(5);
+        estadoSeleccionPetserker = true;
     } else {
         return (
-            estado = false,
-            alert('selecciona un petserker 🐉')
+            estadoSeleccionPetserker = false,
+            alert('Por favor selecciona un petserker 🐉')
         );
     };
     seleccionPetserkerEnemigo()
@@ -97,15 +106,46 @@ function ataqueViento() {
     ataqueJugador = listaAtaquesPetserkers(3);
     ataqueAleatorioPetserkerEnemiga();
 };
-    function ataqueAleatorioPetserkerEnemiga(){
-        ataqueAleatorio = aleatorio(4,1);
-        if (ataqueAleatorio == 4){
-            return ataqueEnemigo = listaAtaquesPetserkers(0)
-        };
-        return ataqueEnemigo = listaAtaquesPetserkers(ataqueAleatorio);
+function ataqueAleatorioPetserkerEnemiga() {
+    ataqueAleatorio = aleatorio(4, 1);
+    if (ataqueAleatorio == 4) {
+        ataqueEnemigo = listaAtaquesPetserkers(0)
+    } else {
+        ataqueEnemigo = listaAtaquesPetserkers(ataqueAleatorio);
     };
+    crearMensaje();
+};
 
+function resultadoChoqueAtaques() {
+    if (ataqueJugador == listaAtaquesPetserkers(0) && ataqueEnemigo == listaAtaquesPetserkers(3) ||
+        ataqueJugador == listaAtaquesPetserkers(1) && ataqueEnemigo == listaAtaquesPetserkers(0) ||
+        ataqueJugador == listaAtaquesPetserkers(2) && ataqueEnemigo == listaAtaquesPetserkers(1) ||
+        ataqueJugador == listaAtaquesPetserkers(3) && ataqueEnemigo == listaAtaquesPetserkers(2)) {
 
+        return resultadoCombate = 'Ganaste 🏆';
+    } else if (ataqueJugador == ataqueEnemigo ||
+        ataqueJugador == listaAtaquesPetserkers(0) && ataqueEnemigo == listaAtaquesPetserkers(2) ||
+        ataqueJugador == listaAtaquesPetserkers(1) && ataqueEnemigo == listaAtaquesPetserkers(3) ||
+        ataqueJugador == listaAtaquesPetserkers(2) && ataqueEnemigo == listaAtaquesPetserkers(0) ||
+        ataqueJugador == listaAtaquesPetserkers(3) && ataqueEnemigo == listaAtaquesPetserkers(1)) {
+
+        return resultadoCombate = 'Empate 👾';
+    } else {
+        return resultadoCombate = 'Perdiste 💩'
+    }
+};
+
+function crearMensaje() {
+    let mensajeAtaques = document.getElementById('mensajes');
+    let parrafo = document.createElement('p');
+    if (estadoSeleccionPetserker == true) {
+        parrafo.innerHTML = `Tu Petserker ataco con ${ataqueJugador}, la mascota del enemigo ataco con ${ataqueEnemigo} - ${resultadoChoqueAtaques()}`;
+        mensajeAtaques.appendChild(parrafo);
+    } else {
+        parrafo.innerHTML = ` No has elegido un petserker 👾 con el que atacar 🤬`;
+        mensajeAtaques.appendChild(parrafo);
+    };
+};
 
 
 window.addEventListener('load', iniciarJuego);//evento para escuchar cuando el navegador esta cargado al 100%
