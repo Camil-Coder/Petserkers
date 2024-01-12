@@ -9,7 +9,7 @@ let vidasEnemigo = 3;
 
 //Arrays
 function listaPetserkers(num) {
-    var petserkers = ['cropo', 'lunetai', 'plichustan', 'floki', 'yinyin', 'minihen'];
+    var petserkers = ['cropo', 'lunetai', 'plichustan', 'floki', 'yinyin', 'robernik'];
     return petserkers[num];
 };
 function listaAtaquesPetserkers(numListaAtaques) {
@@ -80,7 +80,7 @@ function sleccionarPetserkerJugador() {
     const plichustan = document.getElementById('plichustan');
     const floki = document.getElementById('floki');
     const yinyin = document.getElementById('yinyin');
-    const minihen = document.getElementById('minihen');
+    const minihen = document.getElementById('robernik');
     const petserkerJugador = document.getElementById('PetserkerJugador');
 
     if (cropo.checked) {
@@ -103,7 +103,7 @@ function sleccionarPetserkerJugador() {
         petserkerJugador.innerHTML = listaPetserkers(4);
         estadoSeleccionPetserker = true;
     }
-    else if (minihen.checked) {
+    else if (robernik.checked) {
         petserkerJugador.innerHTML = listaPetserkers(5);
         estadoSeleccionPetserker = true;
     } else {

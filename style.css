@@ -1,13 +1,144 @@
-*{
+/*importaciones de fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bungee+Spice&family=Genos:wght@100&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bungee+Spice&family=Genos:wght@100&display=swap');
+
+/*                       */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*titulo*/
-.titulo{
-    font-size: 28px;
-    color: hotpink;
-    width: 320px;
-    height: 50px;
+/*body*/
+body {
+    background-color: rgb(20, 20, 20);
 }
+
+/*contenedor titulo*/
+.contenedor-titulo-principal {
+    font-family: 'Poppins', sans-serif;
+    height: 50px;
+    width: 100%;
+    color: #fff;
+}
+
+/*titulo*/
+.titulo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .3s linear;
+    color: transparent;
+    -webkit-text-stroke: 0.3px rgba(195, 0, 255, 0.817);
+    background-image: linear-gradient(to left,
+    purple,rgb(138, 3, 138), black, rgb(35, 31, 31));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    animation: move 40s linear infinite;
+}
+
+@keyframes move{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+/*contenedor subtitulo cartas y boton*/
+#seleccion-Petserker {
+    margin: 10px 10px 0px 10px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 88vh;
+    border: 0;
+    background-image: linear-gradient(150deg,
+            #9500ff,
+            rgb(81, 3, 68),
+            #3300ff);
+    border-radius: 8px;
+}
+/*contenedor de subtitulo cards y boton*/
+.container-sub-cards-btn{
+    background-color: #111;
+    width: 98%;
+    height: 99%;
+    border-radius: 6px;
+    transition: .3s;
+    margin: 0 auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*subtitulo*/
+.subtiulo {
+    margin-top: 10px;
+    font-family: 'Black Ops One';
+    color: rgba(210, 14, 14, 0.673);
+    margin-bottom: 20px;
+}
+
+/* conteneder cartas*/
+.container-cards {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    max-height: 300px;
+    margin-bottom: 25px;
+}
+
+/*labels cartas de petserkers*/
+.card {
+    width: 100%;
+    height: 400px;
+    background-color: #3b3b3bcd;
+    color: rgb(52, 104, 192);
+    padding: 10px;
+    margin: 2px;
+    border-radius: 20px;
+}
+
+/*imagenes delos petserkers*/
+.container-cards img {
+    height: 250px;
+}
+
+/*inputs de cartas*/
+input {
+    display: none;
+}
+
+/*estilos de botno de señleccionar petserker*/
+button {
+    border: 0;
+    background-image: linear-gradient(150deg,
+            #9500ff,
+            rgb(81, 3, 68),
+            #3300ff);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button span {
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+button:hover span {
+    background: none;
+}
+

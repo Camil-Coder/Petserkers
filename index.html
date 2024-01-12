@@ -10,32 +10,58 @@
 </head>
 
 <body>
-    <h1 class="titulo">Petserkers! 🔥 💧 🌱 🌪️ </h1>
-
+    
+    <header class="contenedor-titulo-principal">
+        <h1 class="titulo"> 
+            Petserkers!  
+        </h1>
+    </header>
     <section id="seleccion-Petserker">
 
-        <h2>Elige tu mascota: </h2>
+        <div class="container-sub-cards-btn">
+            <h2 class="subtiulo">Elige tu mascota: </h2>
 
-        <label for="cropo" >cropo</label> <!-- agua -->
-        <input type="radio" id="cropo" name="Petserkers" value="cropo" />
-
-        <label for="lunetai" >lunetai</label><!-- tierrra -->
-        <input type="radio" id="lunetai" name="Petserkers" value="lunetai" />
-
-        <label for="plichustan" >plichustan</label><!-- fuego-->
-        <input type="radio" id="plichustan" name="Petserkers" value="plichustan" />
-
-        <label for="floki" >floki</label><!-- viento -->
-        <input type="radio" id="floki" name="Petserkers" value="floki" />
-
-        <label for="yinyin" >yinyin</label><!-- viento-fuego-->
-        <input type="radio" id="yinyin" name="Petserkers" value="yinyin" />
-
-        <label for="minihen" >minihen</label><!-- agua-tierra -->
-        <input type="radio" id="minihen" name="Petserkers" value="minihen" />
-
-
-        <button id="btn-petserker" >seleccionar</button>
+            <div class="container-cards">
+                <label class="card" for="cropo" >
+                    <p>Cropo</p>
+                    <img src="./Petserkers/cropo.png" alt="cropo">
+                </label>
+                <input type="radio" id="cropo" name="Petserkers" value="cropo" />
+        
+                <label class="card" for="lunetai" >
+                    <p>Lunetai</p>
+                    <img src="./Petserkers/lunetai.png" alt="lunetai">
+                </label>
+                <input type="radio" id="lunetai" name="Petserkers" value="lunetai" />
+        
+                <label class="card" for="plichustan" >
+                    <p>Plichustan</p>
+                    <img src="./Petserkers/plichustan.png" alt="plichustan">
+                </label>
+                <input type="radio" id="plichustan" name="Petserkers" value="plichustan" />
+        
+                <label class="card" for="floki" >
+                    <p>Floki</p>
+                    <img src="./Petserkers/minihen.png" alt="floki">
+                </label>
+                <input type="radio" id="floki" name="Petserkers" value="floki" />
+        
+                <label class="card" for="yinyin" >
+                    <p>Yinyin</p>
+                    <img src="./Petserkers/yinyin.png" alt="yinyin">
+                </label>
+                <input type="radio" id="yinyin" name="Petserkers" value="yinyin" />
+        
+                <label class="card" for="robernik" >
+                    <p>Robernik</p>
+                    <img src="./Petserkers/mapaterminator.png" alt="robernik">
+                </label>
+                <input type="radio" id="robernik" name="Petserkers" value="minihen" />
+            </div>
+    
+    
+            <button id="btn-petserker" ><span>seleccionar</span></button>
+        </div>
 
     </section>
 
@@ -47,10 +73,10 @@
         <h2>Elige tu ataque: </h2>
 
         <p>
-            <button id="btn-fuego" >Fuego🔥</button>
-            <button id="btn-agua" >Agua💧</button>
-            <button id="btn-tierra" >Tierra🌱</button>
-            <button id="btn-viento" >Viento🌪️</button>
+            <button id="btn-fuego" ><span>Fuego🔥</span></button>
+            <button id="btn-agua" ><span>Agua💧</span></button>
+            <button id="btn-tierra" ><span>Tierra🌱</span></button>
+            <button id="btn-viento" ><span>Viento🌪️</span></button>
         </p>
 
         <section id="mensajes">
