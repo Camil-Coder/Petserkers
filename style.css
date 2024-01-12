@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*titulo*/
+.titulo{
+    font-size: 28px;
+    color: hotpink;
+    width: 320px;
+    height: 50px;
+}

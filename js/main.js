@@ -72,11 +72,9 @@ function iniciarJuego() {
     btnPetserker.addEventListener('click', sleccionarPetserkerJugador);
     //addEvent-Reiniciar Juego
     btnReiniciar.addEventListener('click', reiniciarJuego);
-    btnReiniciar = document.getElementById('reiniciar').style.display = 'none';
 };
 
 function sleccionarPetserkerJugador() {
-    
     const cropo = document.getElementById('cropo');
     const lunetai = document.getElementById('lunetai');
     const plichustan = document.getElementById('plichustan');
