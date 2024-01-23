@@ -16,8 +16,11 @@ body {
 
 /*contenedor titulo*/
 .contenedor-titulo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
-    height: 50px;
+    height: 80px;
     width: 100%;
     color: #fff;
 }
@@ -26,7 +29,7 @@ body {
 .titulo {
     text-align: center;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 50px;
     cursor: pointer;
     transition: .3s linear;
     color: transparent;
@@ -71,45 +74,64 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 /*subtitulo*/
 .subtiulo {
-    margin-top: 10px;
+    margin-top: 5px;
     font-family: 'Black Ops One';
-    color: rgba(210, 14, 14, 0.673);
-    margin-bottom: 20px;
+    color: rgba(192, 22, 214, 0.673);
+    margin-bottom: 5px;
 }
 
 /* conteneder cartas*/
 .container-cards {
     width: 100%;
-    height: 80%;
+    position: relative;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: auto;
-    max-height: 300px;
-    margin-bottom: 25px;
+    margin: 0 auto;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
 }
 
 /*labels cartas de petserkers*/
 .card {
-    width: 100%;
-    height: 400px;
-    background-color: #3b3b3bcd;
-    color: rgb(52, 104, 192);
+    width: 290px;
+    height: 340px;
+    background-color: #390760ad;
     padding: 10px;
     margin: 2px;
     border-radius: 20px;
+    margin: 10px;
 }
 
 /*imagenes delos petserkers*/
 .container-cards img {
-    height: 250px;
+    width: 250px;
+    left: 0;
+    position: sticky;
+    object-fit: cover;
+    border-radius: 5px;
+    scroll-snap-align: center;
 }
-
+/*Nombre de los petserkers*/
+.container-cards p{
+    margin-bottom: 8px;
+    margin-top: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    cursor: pointer;
+    transition: .2s linear;
+    color: transparent;
+    -webkit-text-stroke: 0.3px rgba(241, 241, 248, 0.817);
+    background-image: linear-gradient(to left,
+    rgb(250, 233, 0),rgba(233, 224, 54, 0.819), rgb(166, 160, 105), rgb(247, 247, 247));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    animation: move 50s linear infinite;
+}
 /*inputs de cartas*/
 input {
     display: none;
@@ -129,6 +151,7 @@ button {
     padding: 4px;
     cursor: pointer;
     transition: .3s;
+    margin-top: 5px;
 }
 
 button span {
