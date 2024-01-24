@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petserkers!</title>
-    <script src="./js/main.js" ></script>
+    <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./movile.css">
 </head>
 
 <body>
-    
+
     <header class="contenedor-titulo-principal">
-        <h1 class="titulo"> 
-            Petserkers  
+        <h1 class="titulo">
+            Petserkers
         </h1>
     </header>
     <section id="seleccion-Petserker">
@@ -22,71 +22,96 @@
             <h2 class="subtiulo">Elige tu mascota: </h2>
 
             <div class="container-cards">
-                <label class="card" for="cropo" >
+                <label class="card" for="cropo">
                     <p>Cropo</p>
                     <img src="./Petserkers/cropo.png" alt="cropo">
                 </label>
                 <input type="radio" id="cropo" name="Petserkers" value="cropo" />
-        
-                <label class="card" for="lunetai" >
+
+                <label class="card" for="lunetai">
                     <p>Lunetai</p>
                     <img src="./Petserkers/lunetai.png" alt="lunetai">
                 </label>
                 <input type="radio" id="lunetai" name="Petserkers" value="lunetai" />
-        
-                <label class="card" for="plichustan" >
+
+                <label class="card" for="plichustan">
                     <p>Plichustan</p>
                     <img src="./Petserkers/plichustan.png" alt="plichustan">
                 </label>
                 <input type="radio" id="plichustan" name="Petserkers" value="plichustan" />
-        
-                <label class="card" for="floki" >
+
+                <label class="card" for="floki">
                     <p>Floki</p>
                     <img src="./Petserkers/minihen.png" alt="floki">
                 </label>
                 <input type="radio" id="floki" name="Petserkers" value="floki" />
-        
-                <label class="card" for="yinyin" >
+
+                <label class="card" for="yinyin">
                     <p>Yinyin</p>
                     <img src="./Petserkers/yinyin.png" alt="yinyin">
                 </label>
                 <input type="radio" id="yinyin" name="Petserkers" value="yinyin" />
-        
-                <label class="card" for="robernik" >
+
+                <label class="card" for="robernik">
                     <p>Robernik</p>
                     <img src="./Petserkers/mapaterminator.png" alt="robernik">
                 </label>
                 <input type="radio" id="robernik" name="Petserkers" value="minihen" />
             </div>
-    
-    
-            <button id="btn-petserker" ><span>seleccionar</span></button>
+
+
+            <button id="btn-petserker"><span>seleccionar</span></button>
         </div>
 
     </section>
 
     <section id="sleccion-ataque" style="display: none;">
-        
-        <p>Tu Petserker <span id="PetserkerJugador"></span> tiene <span id="vidaPetserkerJugador">3</span> vidas</p>
-        <p>La Petserker enemiga <span id="PetserkerEnemiga"></span> tiene <span id="vidaPetserkerEnemigo">3</span> vidas</p>
-        
+        <!--         barra de vida de jugadores-->
+        <div class="contenedor-vidas-jugador-enemigo">
+            <!--  barra de vida jugador-->
+            <div class="vidaJugador contenedor-barra">
+                <div class="icono-corazon"></div>
+                <div class="barra" id="barra">
+                    <div id="vidaPetserkerJugador"></div>
+                </div>
+            </div>
+            <!-- logo de espadas versus-->
+            <div class="logo-versus"></div>
+            <!--  barra de vida enemigo-->
+            <div class="vida-enemigo contenedor-barra">
+                <div class="barra">
+                    <div id="vidaPetserkerEnemigo"></div>
+                </div>
+                <div class="icono-corazon"></div>
+            </div>
+        </div>
+        <!--         Imagenes de petserkers seleccionados-->
+        <div class="contenedor-petserker-jugador-enemigo">
+            <div class="contendor-jugador box">
+                <div id="PetserkerJugador"></div>
+            </div>
+            <div class="versus"></div>
+            <div class="contenedor-enemigo box">
+                <div id="PetserkerEnemiga"></div>
+            </div>
+        </div>
+        <!--         historial de ataques-->
+        <div class="mensajes">
+            <div id="mensajes"></div>
+        </div>
+        <!--         lista ataques-->
         <h2>Elige tu ataque: </h2>
+        <div class="contenedor de ataques">
+            <button id="btn-fuego"><span>Fuego🔥</span></button>
+            <button id="btn-agua"><span>Agua💧</span></button>
+            <button id="btn-tierra"><span>Tierra🌱</span></button>
+            <button id="btn-viento"><span>Viento🌪️</span></button>
+        </div>
 
-        <p>
-            <button id="btn-fuego" ><span>Fuego🔥</span></button>
-            <button id="btn-agua" ><span>Agua💧</span></button>
-            <button id="btn-tierra" ><span>Tierra🌱</span></button>
-            <button id="btn-viento" ><span>Viento🌪️</span></button>
-        </p>
-
-        <section id="mensajes">
-    <!--         <p>Tu Petserker ataco con fuego, la mascota del enemigo ataco con tierra - 🎉GANASTE🎉 🏆</p> -->
-        </section>
-    
     </section>
-    <section id="reiniciar" style="display: none;" >
+    <section id="reiniciar" style="display: none;">
 
-        <button  id="btn-reinicio" >Reiniciar</button>
+        <button id="btn-reinicio">Reiniciar</button>
 
     </section>
 

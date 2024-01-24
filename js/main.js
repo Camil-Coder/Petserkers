@@ -80,7 +80,7 @@ function sleccionarPetserkerJugador() {
     const plichustan = document.getElementById('plichustan');
     const floki = document.getElementById('floki');
     const yinyin = document.getElementById('yinyin');
-    const minihen = document.getElementById('robernik');
+    const robernik = document.getElementById('robernik');
     const petserkerJugador = document.getElementById('PetserkerJugador');
 
     if (cropo.checked) {
@@ -112,7 +112,7 @@ function sleccionarPetserkerJugador() {
             alert('Por favor selecciona un petserker 🐉')
         );
     };
-    sectionSeleccionAtaque = document.getElementById('sleccion-ataque').style.display = 'block';
+    sectionSeleccionAtaque = document.getElementById('sleccion-ataque').style.display = 'flex';
     sectionSeleccionPetserker = document.getElementById('seleccion-Petserker').style.display = 'none';
     seleccionPetserkerEnemigo()
 };
@@ -122,9 +122,9 @@ function seleccionPetserkerEnemigo() {
     let petserkerAleatorio = aleatorio(6, 1)
     if (petserkerAleatorio == 6) {
         petserkerAleatorio = 0;
-        petserkerEnemiga.innerHTML = 'es ' + listaPetserkers(petserkerAleatorio);
+        petserkerEnemiga.innerHTML = listaPetserkers(petserkerAleatorio);
     } else {
-        petserkerEnemiga.innerHTML = 'es ' + listaPetserkers(petserkerAleatorio);
+        petserkerEnemiga.innerHTML = listaPetserkers(petserkerAleatorio);
     }
 };
 

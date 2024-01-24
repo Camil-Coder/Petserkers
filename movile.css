@@ -19,6 +19,7 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
+    overflow: hidden;
 }
 
 /*contenedor titulo*/
@@ -152,7 +153,7 @@ input {
 }
 
 /*estilos de botno de señleccionar petserker*/
-button {
+#btn-petserker {
     border: 0;
     background-image: linear-gradient(150deg,
             #9500ff,
@@ -169,14 +170,14 @@ button {
     transition: 2s;
 }
 
-button span {
+#btn-petserker span {
     background-color: #111;
     padding: 16px 24px;
     border-radius: 6px;
     transition: .3s;
 }
 
-button:hover span {
+#btn-petserker:hover span {
     background: none;
 }
 
@@ -186,4 +187,96 @@ footer{
     width: 100%;
     background-color: #442f4391;
     margin-top:10px ;
+}
+/* contenedor de interfaz de ataques*/
+#sleccion-ataque{
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+}
+/*contenedor de barra de vida de jugador y enemigo*/
+.contenedor-vidas-jugador-enemigo{
+    height: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color:  rgba(75, 0, 130, 0.3);
+}
+/*barra vida jugador */
+.contenedor-barra{
+    height: 100%;
+    width: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/*logo de vs espadas*/
+.logo-versus{
+    width: 20%;
+    background-color:rgb(0, 0, 0, 0.0) ;
+    background-image: url(./Petserkers/espada.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+/*icono corazon*/
+.icono-corazon{
+    height: 30px;
+    width: 30px;
+    background-image: url(./Petserkers/corazon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/*barra de vida*/
+.barra{
+    width: 60%;
+    height: 10px;
+    background-color: rgb(127, 255, 212,0.5);
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+/*vida de enemigo*/
+#vidaPetserkerEnemigo{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 56, 46, 0.7);
+    transition: .3s;
+}
+/*vida jugador*/
+#barra{
+    flex-direction: row;
+}
+#vidaPetserkerJugador{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 245, 73, 0.5);
+}
+/*contenedor imagenes de petserkers elegidos*/
+.contenedor-petserker-jugador-enemigo{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 31%;
+    background-color: rgb(0, 0, 0,0.3);
+}
+/*contenedores de luchadores*/
+.box{
+    height: 90%;
+    width: 35%;
+    background-color: rgb(165, 42, 42,0.5);
+}
+/*vs*/
+.versus{
+    height: 40px;
+    width: 40px;
+    background-image: url(./Petserkers/vs.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 5px 0 5px;
 }
