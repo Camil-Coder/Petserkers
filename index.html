@@ -19,7 +19,7 @@
     <section id="seleccion-Petserker">
 
         <div class="container-sub-cards-btn">
-            <h2 class="subtiulo">Elige tu mascota: </h2>
+            <h2 class="subtiulo">Elige tu mascota </h2>
 
             <div class="container-cards">
                 <label class="card" for="cropo">
@@ -42,7 +42,7 @@
 
                 <label class="card" for="floki">
                     <p>Floki</p>
-                    <img src="./Petserkers/minihen.png" alt="floki">
+                    <img src="./Petserkers/floki.png" alt="floki">
                 </label>
                 <input type="radio" id="floki" name="Petserkers" value="floki" />
 
@@ -54,13 +54,13 @@
 
                 <label class="card" for="robernik">
                     <p>Robernik</p>
-                    <img src="./Petserkers/mapaterminator.png" alt="robernik">
+                    <img src="./Petserkers/robernik.png" alt="robernik">
                 </label>
                 <input type="radio" id="robernik" name="Petserkers" value="minihen" />
             </div>
 
 
-            <button id="btn-petserker"><span>seleccionar</span></button>
+            <button id="btn-petserker" class="btn-petserker"><span>seleccionar</span></button>
         </div>
 
     </section>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <!-- logo de espadas versus-->
-            <div class="logo-versus"></div>
+            <div class="logo-versus" id="logo-versus"></div>
             <!--  barra de vida enemigo-->
             <div class="vida-enemigo contenedor-barra">
                 <div class="barra">
@@ -87,31 +87,47 @@
         </div>
         <!--         Imagenes de petserkers seleccionados-->
         <div class="contenedor-petserker-jugador-enemigo">
-            <div class="contendor-jugador box">
+            <div class="contendor-jugador box btn-petserker">
+                <div id="nombrePetserkerJugador" class="nombrePetserkersCombatientes"></div>
                 <div id="PetserkerJugador"></div>
             </div>
+            
             <div class="versus"></div>
-            <div class="contenedor-enemigo box">
+            
+            <div class="contenedor-enemigo box btn-petserker">
+                <div id="nombrePetserkerEnemigo" class="nombrePetserkersCombatientes"></div>
                 <div id="PetserkerEnemiga"></div>
             </div>
         </div>
         <!--         historial de ataques-->
-        <div class="mensajes">
-            <div id="mensajes"></div>
+        <div class="mensajesAtaques">
+            <!-- resultado del combate -->
+            <div id="resultado" style="display: none;"></div>
+            <!-- contenedor de ataques lanzados por los jugadores -->
+            <div id="containerPowers">
+                <!-- poder del jugador -->
+                <div id="poderJugador" class="boxPower">   
+                </div>
+                <!-- poder del enemigo -->
+                <div id="poderEnemigo" class="boxPowertwo">
+                </div>
+            </div>
         </div>
         <!--         lista ataques-->
-        <h2>Elige tu ataque: </h2>
-        <div class="contenedor de ataques">
-            <button id="btn-fuego"><span>Fuego🔥</span></button>
-            <button id="btn-agua"><span>Agua💧</span></button>
-            <button id="btn-tierra"><span>Tierra🌱</span></button>
-            <button id="btn-viento"><span>Viento🌪️</span></button>
+        <div class="contenedor-subtitulo">
+            <h2 class="subtiulo">Elige tu ataque </h2>
+        </div>
+        <div class="contenedor-de-ataques" id="contenedorAtaques">
+            <button id="btn-fuego" class="btn-ataques"><img src="./Petserkers/fuego-3d.png" alt="fuego"></button>
+            <button id="btn-agua" class="btn-ataques"><img src="./Petserkers/agua.png" alt="agua"></button>
+            <button id="btn-tierra" class="btn-ataques"><img src="./Petserkers/tierra.png" alt="tierra"></button>
+            <button id="btn-viento" class="btn-ataques"><img src="./Petserkers/viento.png" alt="viento"></button>
         </div>
 
     </section>
     <section id="reiniciar" style="display: none;">
 
-        <button id="btn-reinicio">Reiniciar</button>
+        <button id="btn-reinicio" class="btn-petserker"><span>Reiniciar</span></button>
 
     </section>
 

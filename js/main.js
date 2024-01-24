@@ -13,43 +13,30 @@ function listaPetserkers(num) {
     return petserkers[num];
 };
 function listaAtaquesPetserkers(numListaAtaques) {
-    let ataques = ['FUEGO🔥', 'AGUA💧', 'TIERRA🌱', 'VIENTO🌪️'];
+    let ataques = ['atcFuego', 'atcAgua', 'atcTierra', 'atcViento'];
     return ataques[numListaAtaques];
 }
 function listaResultadoCombate(numListaCombate) {
     let resultado = ['Ganaste 🏆', 'Perdiste 💩', 'Empate 👾'];
     return resultado[numListaCombate];
 }
-function listaMensajes(numListaMensajes) {
-    let mensajes = [`Tu Petserker ataco con ${ataqueJugador},
-    la mascota del enemigo ataco con ${ataqueEnemigo} - ${resultadoChoqueAtaques()}`,
-        ' No has elegido un petserker 👾 con el que atacar 🤬 ',
-        ' 🎉¡Has Ganado el duelo entre petserkers!🎉',
-        ' 😵‍💫¡Has Perdido el duelo entre petserkers!😵‍💫'];
+/* function listaMensajes(numListaMensajes) {
+    let mensajes = ['cielo','ades'];
     return mensajes[numListaMensajes];
-}
+} */
 //Aleatoriedad
 function aleatorio(max, min) {
     return resultado = Math.floor(Math.random() * (max - min + 1) + 1);
 }
-//Crear mensajes
-function crearMensaje(mensaje) {
-    let mensajeAtaques = document.getElementById('mensajes');
-    let parrafo = document.createElement('p');
-    parrafo.innerHTML = mensaje;
-    mensajeAtaques.appendChild(parrafo);
-};
+
 //reiniciar juego 
 function reiniciarJuego() {
     location.reload();
 }
 //dshabilitar botones
-function desabilidarBotones(){
-    btnFuego = document.getElementById('btn-fuego').disabled = true;
-    btnAgua = document.getElementById('btn-agua').disabled = true;
-    btnTierra = document.getElementById('btn-tierra').disabled = true;
-    btnViento = document.getElementById('btn-viento').disabled = true;
-    btnReiniciar = document.getElementById('reiniciar').style.display = 'block';
+function desabilidarBotones() {
+    btnsAtaques = document.getElementById('contenedorAtaques').style.display = 'none';
+    btnReiniciar = document.getElementById('reiniciar').style.display = 'flex';
 }
 
 
@@ -82,29 +69,36 @@ function sleccionarPetserkerJugador() {
     const yinyin = document.getElementById('yinyin');
     const robernik = document.getElementById('robernik');
     const petserkerJugador = document.getElementById('PetserkerJugador');
+    const nombrePetserkerjugador = document.getElementById('nombrePetserkerJugador');
 
     if (cropo.checked) {
-        petserkerJugador.innerHTML = listaPetserkers(0);
+        nombrePetserkerjugador.innerHTML = listaPetserkers(0);
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(0)}.png')`;
         estadoSeleccionPetserker = true;
     }
     else if (lunetai.checked) {
-        petserkerJugador.innerHTML = listaPetserkers(1);
+        nombrePetserkerjugador.innerHTML = listaPetserkers(1);
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(1)}.png')`;
         estadoSeleccionPetserker = true;
     }
     else if (plichustan.checked) {
-        petserkerJugador.innerHTML = listaPetserkers(2);
+        nombrePetserkerjugador.innerHTML = listaPetserkers(2);
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(2)}.png')`;
         estadoSeleccionPetserker = true;
     }
     else if (floki.checked) {
-        petserkerJugador.innerHTML = listaPetserkers(3);
+        nombrePetserkerjugador.innerHTML = listaPetserkers(3);
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(3)}.png')`;
         estadoSeleccionPetserker = true;
     }
     else if (yinyin.checked) {
-        petserkerJugador.innerHTML = listaPetserkers(4);
+        nombrePetserkerjugador.innerHTML = listaPetserkers(4);
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(4)}.png')`;
         estadoSeleccionPetserker = true;
     }
     else if (robernik.checked) {
-        petserkerJugador.innerHTML = listaPetserkers(5);
+        nombrePetserkerjugador.innerHTML = listaPetserkers(5);
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(5)}.png')`;
         estadoSeleccionPetserker = true;
     } else {
         return (
@@ -119,12 +113,15 @@ function sleccionarPetserkerJugador() {
 
 function seleccionPetserkerEnemigo() {
     const petserkerEnemiga = document.getElementById('PetserkerEnemiga');
+    const nombrePetserkerEnemigo = document.getElementById('nombrePetserkerEnemigo');
     let petserkerAleatorio = aleatorio(6, 1)
     if (petserkerAleatorio == 6) {
         petserkerAleatorio = 0;
-        petserkerEnemiga.innerHTML = listaPetserkers(petserkerAleatorio);
+        nombrePetserkerEnemigo.innerHTML = listaPetserkers(petserkerAleatorio);
+        petserkerEnemiga.style.backgroundImage = `url('./Petserkers/${listaPetserkers(petserkerAleatorio)}.png')`;
     } else {
-        petserkerEnemiga.innerHTML = listaPetserkers(petserkerAleatorio);
+        nombrePetserkerEnemigo.innerHTML = listaPetserkers(petserkerAleatorio);
+        petserkerEnemiga.style.backgroundImage = `url('./Petserkers/${listaPetserkers(petserkerAleatorio)}.png')`;
     }
 };
 
@@ -154,7 +151,7 @@ function ataqueAleatorioPetserkerEnemiga() {
         } else {
             ataqueEnemigo = listaAtaquesPetserkers(ataqueAleatorio);
         };
-        crearMensaje(listaMensajes(0));
+/*         crearMensaje(listaMensajes(0)); */
         descuentoDeVidas();
         revisarVidas();
     } else {
@@ -190,25 +187,64 @@ function resultadoChoqueAtaques() {
 function descuentoDeVidas() {
     let spanVidasJugador = document.getElementById('vidaPetserkerJugador');
     let spanVidasEnemigo = document.getElementById('vidaPetserkerEnemigo');
+
     if (resultadoCombate == listaResultadoCombate(0)) {
         vidasEnemigo = vidasEnemigo - 1;
-        spanVidasEnemigo.innerHTML = vidasEnemigo;
+        if (vidasEnemigo == 2) {
+            spanVidasEnemigo.style.width = "66%";
+            spanVidasEnemigo.style.transition = "5s";
+        } else if (vidasEnemigo == 1) {
+            spanVidasEnemigo.style.width = "33%";
+            spanVidasEnemigo.style.transition = "4s";
+        } else if (vidasEnemigo == 0) {
+            spanVidasEnemigo.style.width = "1%";
+            spanVidasEnemigo.style.transition = "3s";
+        }
     } else if (resultadoCombate == listaResultadoCombate(1)) {
         vidasJugador = vidasJugador - 1;
-        spanVidasJugador.innerHTML = vidasJugador;
+        if (vidasJugador == 2) {
+            spanVidasJugador.style.width = "66%";
+            spanVidasJugador.style.transition = "5s";
+        } else if (vidasJugador == 1) {
+            spanVidasJugador.style.width = "33%";
+            spanVidasJugador.style.transition = "4s";
+        } else if (vidasJugador == 0) {
+            spanVidasJugador.style.width = "1%";
+            spanVidasJugador.style.transition = "3s";
+        }
+    }else{
+            // Cambiar al primer color
+    spanVidasEnemigo.style.backgroundColor = 'rgba(86, 46, 245, 0.8)';
+    spanVidasEnemigo.style.transition = "background-color 3s";
+    spanVidasJugador.style.backgroundColor = 'rgba(86, 46, 245, 0.8)';
+    spanVidasJugador.style.transition = "background-color 3s";
+
+    // Esperar 3 segundos antes de cambiar de nuevo al color original
+    setTimeout(function () {
+        spanVidasEnemigo.style.backgroundColor = 'rgba(245, 56, 46, 0.7)';
+        spanVidasEnemigo.style.transition = "background-color 3s";    
+        spanVidasJugador.style.backgroundColor = 'rgba(46, 245, 73, 0.5)';
+        spanVidasJugador.style.transition = "background-color 3s";
+    }, 1000);
     }
+
 };
 
 function revisarVidas() {
     if (vidasEnemigo == 0) {
-        crearMensaje(listaMensajes(2));
+        ImprimirAtaque(listaMensajes(2));
         desabilidarBotones();
     } else if (vidasJugador == 0) {
-        crearMensaje(listaMensajes(3));
+        ImprimirAtaque(listaMensajes(3));
         desabilidarBotones();
     }
 };
 
+//Crear mensajes
+function ImprimirAtaque(mensaje) {
+    let powerJugador = document.getElementById('powerJugador');
+    let powerEnemigo = document.getElementById('powerEnemigo');
 
+};
 
 window.addEventListener('load', iniciarJuego);//evento para escuchar cuando el navegador esta cargado al 100%

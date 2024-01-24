@@ -9,9 +9,10 @@
     box-sizing: border-box;
 }
 
-:root{
-    --borde:linear-gradient(150deg,#9500ff,rgb(81, 3, 68),#3300ff); 
+:root {
+    --borde: linear-gradient(150deg, #9500ff, rgb(81, 3, 68), #3300ff);
 }
+
 /*body*/
 body {
     background-image: url(./Petserkers/arena.png);
@@ -32,7 +33,7 @@ body {
     width: 100%;
     color: #fff;
     padding-top: 10px;
-    background-color:  rgba(75, 0, 130, 0.3);
+    background-color: rgba(75, 0, 130, 0.3);
 }
 
 /*titulo*/
@@ -41,19 +42,28 @@ body {
     text-transform: uppercase;
     font-size: 50px;
     cursor: pointer;
-    transition: .3s linear;
+    transition: 2s linear left;
     color: transparent;
     -webkit-text-stroke: 0.3px rgba(195, 0, 255, 0.817);
-    background-image: linear-gradient(to left,
-    purple,rgb(138, 3, 138), black, rgb(35, 31, 31));
+    background-image: linear-gradient(358deg,
+            purple, rgb(3, 100, 138), black, rgb(35, 31, 31));
     background-size: 200%;
     -webkit-background-clip: text;
-    animation: move 40s linear infinite;
+    background-clip: text;
+    animation: move 10s linear infinite;
 }
 
-@keyframes move{
-    100%{
-        background-position: 2000px 0;
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
     }
 }
 
@@ -65,12 +75,13 @@ body {
     flex-direction: column;
     align-items: center;
     height: 80vh;
-    border: 0; 
+    border: 0;
     border-radius: 8px;
     background-color: none;
 }
+
 /*contenedor de subtitulo cards y boton*/
-.container-sub-cards-btn{
+.container-sub-cards-btn {
     background-color: rgba(0, 0, 0, 0.5);
     width: 94%;
     height: 98%;
@@ -90,16 +101,19 @@ body {
     font-size: 3.5vh;
     margin-top: 5px;
     font-family: 'Black Ops One';
+    letter-spacing: 1px;
     cursor: pointer;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.817);
-    background-image: linear-gradient(to left,
-    rgb(228, 224, 229),rgb(235, 178, 178), rgb(224, 156, 232), rgb(237, 237, 239));
+    -webkit-text-stroke: 0.5px rgba(11, 11, 11, 0.8);
+    background-image: linear-gradient(359deg,
+            rgb(206, 125, 228), rgb(229, 227, 234), rgb(205, 136, 214), rgb(237, 237, 239));
     background-size: 200%;
     -webkit-background-clip: text;
-    animation: move 40s linear ;
+    background-clip: text;
+    animation: move 40s linear;
     margin-bottom: 5px;
-}                                                                                                                                                                                                                                                                                                                                                                                      
+}
+
 /* conteneder cartas*/
 .container-cards {
     width: 100%;
@@ -130,98 +144,99 @@ body {
     border-radius: 5px;
     scroll-snap-align: center;
 }
+
 /*Nombre de los petserkers*/
-.container-cards p{
+.container-cards p {
     margin-bottom: 8px;
     margin-top: 1px;
     text-align: center;
     text-transform: uppercase;
     font-size: 28px;
-    cursor: pointer;
-    transition: .2s linear;
-    color: transparent;
-    -webkit-text-stroke: 0.3px rgba(241, 241, 248, 0.817);
-    background-image: linear-gradient(to left,
-    rgb(255, 215, 0),rgb(255, 215, 0),rgba(233, 224, 54, 0.819), rgb(166, 160, 105), rgb(247, 247, 247));
-    background-size: 200%;
-    -webkit-background-clip: text;
-    animation: move 50s linear infinite;
+    color: rgb(255, 215, 0, 0.7);
 }
+
 /*inputs de cartas*/
 input {
     display: none;
 }
 
 /*estilos de botno de señleccionar petserker*/
-#btn-petserker {
+.btn-petserker {
     border: 0;
-    background-image: linear-gradient(150deg,
-            #9500ff,
-            rgb(81, 3, 68),
-            #3300ff);
     border-radius: 8px;
-    color: #fff;
+    color: rgba(148, 178, 230, 0.8);
     display: flex;
     font-size: 3vh;
     padding: 4px;
     cursor: pointer;
     transition: .3s;
     margin-top: 5px;
-    transition: 2s;
+    background: linear-gradient(to left, #9500ff, rgb(81, 3, 68), #3300ff);
+    ;
+    background-size: 800%;
+    animation: move 25s linear infinite;
 }
 
-#btn-petserker span {
+.btn-petserker span {
     background-color: #111;
     padding: 16px 24px;
     border-radius: 6px;
     transition: .3s;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Black Ops One';
 }
 
-#btn-petserker:hover span {
+.btn-petserker:active span {
     background: none;
 }
 
 /*footer*/
-footer{
+footer {
     height: 9vh;
     width: 100%;
     background-color: #442f4391;
-    margin-top:10px ;
+    margin-top: 10px;
 }
+
 /* contenedor de interfaz de ataques*/
-#sleccion-ataque{
+#sleccion-ataque {
     align-items: center;
     flex-direction: column;
-    height: 80%;
+    height: 75%;
 }
+
 /*contenedor de barra de vida de jugador y enemigo*/
-.contenedor-vidas-jugador-enemigo{
+.contenedor-vidas-jugador-enemigo {
     height: 8%;
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color:  rgba(75, 0, 130, 0.3);
+    background-color: rgba(75, 0, 130, 0.3);
 }
+
 /*barra vida jugador */
-.contenedor-barra{
+.contenedor-barra {
     height: 100%;
     width: 38%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
+
 /*logo de vs espadas*/
-.logo-versus{
+.logo-versus {
     width: 20%;
-    background-color:rgb(0, 0, 0, 0.0) ;
+    background-color: rgba(229, 12, 207, 0.1);
     background-image: url(./Petserkers/espada.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 50%;
 }
+
 /*icono corazon*/
-.icono-corazon{
+.icono-corazon {
     height: 30px;
     width: 30px;
     background-image: url(./Petserkers/corazon.png);
@@ -229,49 +244,79 @@ footer{
     background-position: center;
     background-size: cover;
 }
+
 /*barra de vida*/
-.barra{
+.barra {
     width: 60%;
     height: 10px;
-    background-color: rgb(127, 255, 212,0.5);
+    background-color: rgb(127, 255, 212, 0.5);
     margin-bottom: 4px;
     display: flex;
     flex-direction: row-reverse;
 }
+
 /*vida de enemigo*/
-#vidaPetserkerEnemigo{
+#vidaPetserkerEnemigo {
     width: 100%;
     height: 100%;
     background-color: rgba(245, 56, 46, 0.7);
     transition: .3s;
 }
+
 /*vida jugador*/
-#barra{
+#barra {
     flex-direction: row;
 }
-#vidaPetserkerJugador{
+
+#vidaPetserkerJugador {
     width: 100%;
     height: 100%;
     background-color: rgba(46, 245, 73, 0.5);
 }
+
 /*contenedor imagenes de petserkers elegidos*/
-.contenedor-petserker-jugador-enemigo{
-    margin-top: 20px;
+.contenedor-petserker-jugador-enemigo {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 31%;
-    background-color: rgb(0, 0, 0,0.3);
+    height: 35%;
+    background-color: rgb(0, 0, 0, 0.3);
 }
+
 /*contenedores de luchadores*/
-.box{
+
+#PetserkerJugador,
+#PetserkerEnemiga {
+    background-color: rgb(23, 23, 23);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     height: 90%;
-    width: 35%;
-    background-color: rgb(165, 42, 42,0.5);
+    border-bottom: 10px;
 }
+
+.box {
+    height: 95%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.nombrePetserkersCombatientes {
+    padding-top: 5px;
+    background-color: #111;
+    color: rgb(255, 215, 0, 0.7);
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
 /*vs*/
-.versus{
+.versus {
     height: 40px;
     width: 40px;
     background-image: url(./Petserkers/vs.png);
@@ -279,4 +324,114 @@ footer{
     background-position: center;
     background-size: cover;
     margin: 0 5px 0 5px;
+}
+
+/*Mensajes*/
+.mensajesAtaques {
+    height: 180px;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    background-color: rgba(75, 0, 130, 0.3);
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerPowers {
+    height: 170px;
+    width: 100%;
+    background-color: rgb(17, 17, 17, 0.4);
+    overflow-y: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxPower {
+    height: 90%;
+    width: 47%;
+    border-radius: 10px;
+    background-color: #42ff341f;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.boxPowertwo {
+    height: 90%;
+    width: 47%;
+    border-radius: 10px;
+    background-color: #ff3e3439;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*mensaje subtitulo*/
+.contenedor-subtitulo {
+    background-color: rgba(75, 0, 130, 0.6);
+    width: 100%;
+    text-align: center;
+}
+
+/*botones de ataques*/
+.btn-ataques {
+    background-color: rgb(30, 30, 30, 0.1);
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 44px;
+    font-weight: bold;
+    position: relative;
+    margin: 0 10px 10px 10px;
+    height: 64px;
+    width: 64px;
+    padding-top: 5px;
+
+}
+
+/*pseudoelemento botones de atque*/
+.contenedor-de-ataques button::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: -5px;
+    z-index: -1;
+    background: linear-gradient(45deg, #ff3f34, #ff6a00, #ff9f00, #ff6a00, #ff3f34);
+    background-size: 800%;
+    filter: blur(8px);
+    animation: move 18s linear infinite;
+    border-radius: 50%;
+}
+
+.contenedor-de-ataques button:nth-of-type(2)::before {
+    background: linear-gradient(45deg, rgb(0, 162, 255), blue, rgb(20, 36, 255), rgb(0, 162, 255), blue, rgb(20, 36, 255));
+    background-size: 800%;
+}
+
+.contenedor-de-ataques button:nth-of-type(3)::before {
+    background: linear-gradient(45deg, rgb(0, 128, 68), rgb(0, 158, 96), rgb(4, 180, 95),
+            rgb(0, 128, 68), rgb(0, 158, 96), rgb(4, 180, 95));
+    background-size: 800%;
+}
+
+.contenedor-de-ataques button:nth-of-type(4)::before {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 1), rgba(240, 250, 255, 1), rgba(230, 245, 255, 1),
+            rgba(240, 250, 255, 1), rgba(255, 255, 255, 1), rgba(240, 250, 255, 1), rgba(230, 245, 255, 1));
+    background-size: 800%;
+}
+
+/*boton de reinicio*/
+#reiniciar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
