@@ -325,13 +325,21 @@ footer {
     background-size: cover;
     margin: 0 5px 0 5px;
 }
-
+/*imagen inicial*/
+#inicioJuego{
+    background-repeat: no-repeat;
+    background-position: center -130px;
+    background-size:cover;
+    height: 95%;
+    width: 98%;
+    border-radius: 10px;
+}
 /*Mensajes*/
 .mensajesAtaques {
     height: 180px;
-    width: 100%;
+    width: 96%;
     color: #fff;
-    padding: 10px;
+    padding: 1px;
     background-color: rgba(75, 0, 130, 0.3);
     margin-bottom: 1px;
     display: flex;
@@ -345,8 +353,8 @@ footer {
     background-color: rgb(17, 17, 17, 0.4);
     overflow-y: auto;
     border-radius: 15px;
-    display: flex;
-    justify-content: center;
+    display: none;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -354,7 +362,6 @@ footer {
     height: 90%;
     width: 47%;
     border-radius: 10px;
-    background-color: #42ff341f;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -364,12 +371,18 @@ footer {
     height: 90%;
     width: 47%;
     border-radius: 10px;
-    background-color: #ff3e3439;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-
+#resultado{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 95%;
+    width: 98%;
+    border-radius: 10px;
+}
 
 /*mensaje subtitulo*/
 .contenedor-subtitulo {
