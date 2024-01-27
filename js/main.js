@@ -5,9 +5,6 @@ let estadoSeleccionPetserker;
 let resultadoCombate;
 let vidasJugador = 3;
 let vidasEnemigo = 3;
-
-
-
 //Arrays
 function listaArenas(num) {
     var arenas = ['arena', 'arena1', 'arena2', 'arena3', 'arena4', 'arena5', 'arena6', 'arena7',];
@@ -69,9 +66,32 @@ function desabilidarBotones() {
     btnReiniciar = document.getElementById('reiniciar').style.display = 'flex';
     imageInicioJuego = document.getElementById('inicioJuego').style.display = 'none';
 }
+/* funcion golpe critico*/
+function golpeCritico() {
+    mensajeAccion = document.getElementById('mensajeAccion').style.display = 'block';
+    mensajeAccion = document.getElementById('mensajeAccion').innerHTML = 'Golpe Critico';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.backgroundColor = 'rgb(7, 81, 3,0.5)';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.width = '100%';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.textAlign = 'center';
+}
+/*funcion de contucion */
+function contuzion() {
+    mensajeAccion = document.getElementById('mensajeAccion').style.display = 'block';
+    mensajeAccion = document.getElementById('mensajeAccion').innerHTML = 'Estas Herido';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.backgroundColor = 'rgba(81, 3, 3, 0.5)';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.width = '100%';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.textAlign = 'center';
+}
+/*funcion de empate */
+function empate() {
+    mensajeAccion = document.getElementById('mensajeAccion').style.display = 'block';
+    mensajeAccion = document.getElementById('mensajeAccion').innerHTML = 'combate igualado';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.backgroundColor = 'rgba(3, 47, 81, 0.5)';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.width = '100%';
+    mensajeAccion = document.getElementById('contenedor-subtitulo').style.textAlign = 'center';
+}
 //************************************************************************/
 function iniciarJuego() {
-    let sectionSeleccionAtaque = document.getElementById('sleccion-ataque');
     let btnPetserker = document.getElementById('btn-petserker');
     let btnFuego = document.getElementById('btn-fuego');
     let btnAgua = document.getElementById('btn-agua');
@@ -182,6 +202,7 @@ function resultadoChoqueAtaques() {
         ataqueJugador == listaAtaquesPetserkers(2) && ataqueEnemigo == listaAtaquesPetserkers(1) ||
         ataqueJugador == listaAtaquesPetserkers(3) && ataqueEnemigo == listaAtaquesPetserkers(2)) {
         //ganar
+        golpeCritico();
         return resultadoCombate = listaResultadoCombate(0);
     } else if (ataqueJugador == ataqueEnemigo ||
         ataqueJugador == listaAtaquesPetserkers(0) && ataqueEnemigo == listaAtaquesPetserkers(2) ||
@@ -189,9 +210,11 @@ function resultadoChoqueAtaques() {
         ataqueJugador == listaAtaquesPetserkers(2) && ataqueEnemigo == listaAtaquesPetserkers(0) ||
         ataqueJugador == listaAtaquesPetserkers(3) && ataqueEnemigo == listaAtaquesPetserkers(1)) {
         //empatar
+        empate();
         return resultadoCombate = listaResultadoCombate(1);
     } else {
         //perder
+        contuzion();
         return resultadoCombate = listaResultadoCombate(2);
     }
 
@@ -247,11 +270,19 @@ function revisarVidas() {
         contenedorPowers = document.getElementById('containerPowers').style.display = "none";
         resultadoGanador = document.getElementById('resultado').style.display = 'flex';
         resultadoGanador = document.getElementById('resultado').style.backgroundImage = `url('./Petserkers/cielo.png')`;
+        mensajeAccion = document.getElementById('mensajeAccion').style.display = 'block';
+        mensajeAccion = document.getElementById('mensajeAccion').innerHTML = 'Victoria 🏆';
+        mensajeSelelcionAtaques = document.getElementById('mensajeSeleccionAtaque').style.display= 'none';
+        contenedorMensajeSelelcionAtaques = document.getElementById('contenedor-mensajeAccion').style.display= 'none';
     } else if (vidasJugador == 0) {
         desabilidarBotones();
         contenedorPowers = document.getElementById('containerPowers').style.display = "none";
         resultadoPerdedor = document.getElementById('resultado').style.display = 'flex';
         resultadoPerdedor = document.getElementById('resultado').style.backgroundImage = `url('./Petserkers/ades.png')`;
+        mensajeAccion = document.getElementById('mensajeAccion').style.display = 'block';
+        mensajeAccion = document.getElementById('mensajeAccion').innerHTML = 'Haz perdido 💀';
+        mensajeSelelcionAtaques = document.getElementById('mensajeSeleccionAtaque').style.display= 'none';
+        contenedorMensajeSelelcionAtaques = document.getElementById('contenedor-mensajeAccion').style.display= 'none';
     }
 };
 
