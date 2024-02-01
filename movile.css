@@ -28,11 +28,7 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    overflow: hidden;
-}
-/*main*/
-main {
-    height: 100%;
+    overflow:hidden;
 }
 /*contenedor titulo*/
 .contenedor-titulo-principal {
@@ -45,6 +41,10 @@ main {
     color: var(--blanco);
     padding-top: 10px;
     background-color: var(--morado-con-trasparencia-03);
+}
+/*main*/
+main {
+    height: 85%;
 }
 /*titulo*/
 .titulo {
@@ -62,7 +62,7 @@ main {
     background-clip: text;
     animation: move 10s linear infinite;
 }
-@keyframes move {
+@keyframes move{
     0% {
         background-position: 0 0;
     }
@@ -80,9 +80,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80%;
+    height: 95%;
     border: 0;
-    border-radius: 8px;
 }
 /*contenedor de subtitulo cards y boton*/
 .container-sub-cards-btn {
@@ -188,11 +187,11 @@ input {
 #sleccion-ataque {
     align-items: center;
     flex-direction: column;
-    height: 80%;
+    height: 100%;
 }
 /*contenedor de barra de vida de jugador y enemigo*/
 .contenedor-vidas-jugador-enemigo {
-    height: 8%;
+    height: 4%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -305,17 +304,17 @@ input {
 }
 /*Mensajes*/
 .mensajesAtaques {
-    height: 180px;
-    width: 96%;
+    margin-top: 1%;
+    height: 35%;
+    width: 94%;
     color: var(--blanco);
     padding: 1px;
-    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #containerPowers {
-    height: 170px;
+    height: 100%;
     width: 100%;
     background-color: var(--negro-con-transparencia-05);
     overflow-y: auto;
@@ -342,15 +341,13 @@ input {
     border-radius: 10px;
 }
 /*mensaje subtitulo*/
-.contenedor-subtitulo {
+#contenedor-subtitulo{ margin-top: 2px;}
+#contenedor-subtitulo, .contenedor-subtitulo {
     background-color: var(--morado-con-transparencia-06);
     width: 100%;
-    margin-top: 5px;
+    height: 8%;
     text-align: center;
     padding: 5px;
-}
-#mensajeAccion{
-    height:50px;
 }
 /*botones de ataques*/
 .btn-ataques {
@@ -362,7 +359,7 @@ input {
     font-weight: bold;
     position: relative;
     margin: 0 10px 10px 10px;
-    height: 64px;
+    height: 8%;
     width: 64px;
     padding-top: 5px;
 }
