@@ -9,6 +9,7 @@
 }
 :root {
     --blanco: #fff;
+    --morado-con-transparencia-01:rgba(75, 0, 130, 0.1);
     --morado-con-transparencia-03:rgba(75, 0, 130, 0.3);
     --morado-con-transparencia-05:rgba(75, 0, 130, 0.5);
     --morado-con-transparencia-06:rgba(75, 0, 130, 0.6);
@@ -351,25 +352,22 @@ input {
 }
 /*botones de ataques*/
 .btn-ataques {
-    background-color: var(--morado-con-transparencia-05);
+    background-color: var(--morado-con-transparencia-01);
     cursor: pointer;
     border: none;
     border-radius: 50%;
     font-size: 44px;
-    font-weight: bold;
     position: relative;
-    margin: 0 10px 10px 10px;
-    height: 8%;
-    width: 64px;
-    padding-top: 5px;
+    margin: 0 5px 0 5px;
+    width: 60px;
 }
 /*pseudoelemento botones de atque*/
 .contenedor-de-ataques{margin-top:10px;}
 .contenedor-de-ataques button::before {
     content: "";
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     top: 0;
     left: -5px;
     z-index: -1;
@@ -404,4 +402,13 @@ input {
     top: 80vh;
     right: 0;
     bottom: 0;
+}
+footer {
+    background: var(--morado-con-transparencia-03);
+    color: white;
+    height:5% ;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 5px;
 }
