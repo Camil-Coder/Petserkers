@@ -34,10 +34,10 @@ function seleccionPetserkerEnemigo() {
     if (petserkerAleatorio == 6) {
         petserkerAleatorio = 0;
         nombrePetserkerEnemigo.innerHTML = listaPetserkers(petserkerAleatorio);
-        petserkerEnemiga.style.backgroundImage = `url('./Petserkers/${listaPetserkers(petserkerAleatorio)}.png')`;
+        petserkerEnemiga.style.backgroundImage = `url('./Petserkers/${listaPetserkers(petserkerAleatorio)}.webp')`;
     } else {
         nombrePetserkerEnemigo.innerHTML = listaPetserkers(petserkerAleatorio);
-        petserkerEnemiga.style.backgroundImage = `url('./Petserkers/${listaPetserkers(petserkerAleatorio)}.png')`;
+        petserkerEnemiga.style.backgroundImage = `url('./Petserkers/${listaPetserkers(petserkerAleatorio)}.webp')`;
     }
 };
 //Aleatoriedad
@@ -57,8 +57,8 @@ function desactivarArena() {
 }
 //mostrar en pantall imagenes de ataques
 function monstrarAtaque() {
-    contenedorAtaqueJugador = document.getElementById('poderJugador').style.backgroundImage = `url('./Petserkers/${ataqueJugador}.png')`;
-    contenedorAtaqueEnemigo = document.getElementById('poderEnemigo').style.backgroundImage = `url('./Petserkers/${ataqueEnemigo}.png')`;
+    contenedorAtaqueJugador = document.getElementById('poderJugador').style.backgroundImage = `url('./Petserkers/${ataqueJugador}.webp')`;
+    contenedorAtaqueEnemigo = document.getElementById('poderEnemigo').style.backgroundImage = `url('./Petserkers/${ataqueEnemigo}.webp')`;
 }
 //deshabilitar botones
 function desabilidarBotones() {
@@ -124,27 +124,27 @@ function sleccionarPetserkerJugador() {
 
     if (cropo.checked) {
         nombrePetserkerjugador.innerHTML = listaPetserkers(0);
-        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(0)}.png')`;
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(0)}.webp')`;
         estadoSeleccionPetserker = true;
     }
     else if (lunetai.checked) {
         nombrePetserkerjugador.innerHTML = listaPetserkers(1);
-        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(1)}.png')`;
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(1)}.webp')`;
         estadoSeleccionPetserker = true;
     }
     else if (plichustan.checked) {
         nombrePetserkerjugador.innerHTML = listaPetserkers(2);
-        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(2)}.png')`;
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(2)}.webp')`;
         estadoSeleccionPetserker = true;
     }
     else if (floki.checked) {
         nombrePetserkerjugador.innerHTML = listaPetserkers(3);
-        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(3)}.png')`;
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(3)}.webp')`;
         estadoSeleccionPetserker = true;
     }
     else if (yinyin.checked) {
         nombrePetserkerjugador.innerHTML = listaPetserkers(4);
-        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(4)}.png')`;
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(4)}.webp')`;
         estadoSeleccionPetserker = true;
     }
     else if (robernik.checked) {
@@ -161,7 +161,7 @@ function sleccionarPetserkerJugador() {
     sectionSeleccionAtaque = document.getElementById('sleccion-ataque').style.display = 'flex';
     sectionSeleccionPet = document.getElementById('seleccion-Petserker').style.display = 'none';
     imageInicioJuego = document.getElementById('inicioJuego').style.display = 'flex';
-    imageInicioJuego = document.getElementById('inicioJuego').style.backgroundImage = `url(./Petserkers/${listaArenas(aleatorio(7, 1))}.png)`;
+    imageInicioJuego = document.getElementById('inicioJuego').style.backgroundImage = `url(./Petserkers/${listaArenas(aleatorio(7, 1))}.webp)`;
     seleccionPetserkerEnemigo()
 };
 
@@ -269,7 +269,7 @@ function revisarVidas() {
         desabilidarBotones();
         contenedorPowers = document.getElementById('containerPowers').style.display = "none";
         resultadoGanador = document.getElementById('resultado').style.display = 'flex';
-        resultadoGanador = document.getElementById('resultado').style.backgroundImage = `url('./Petserkers/cielo.png')`;
+        resultadoGanador = document.getElementById('resultado').style.backgroundImage = `url('./Petserkers/cielo.webp')`;
         mensajeAccion = document.getElementById('mensajeAccion').style.display = 'block';
         mensajeAccion = document.getElementById('mensajeAccion').innerHTML = 'Victoria 🏆';
         mensajeSelelcionAtaques = document.getElementById('mensajeSeleccionAtaque').style.display= 'none';
@@ -278,7 +278,7 @@ function revisarVidas() {
         desabilidarBotones();
         contenedorPowers = document.getElementById('containerPowers').style.display = "none";
         resultadoPerdedor = document.getElementById('resultado').style.display = 'flex';
-        resultadoPerdedor = document.getElementById('resultado').style.backgroundImage = `url('./Petserkers/ades.png')`;
+        resultadoPerdedor = document.getElementById('resultado').style.backgroundImage = `url('./Petserkers/ades.webp')`;
         mensajeAccion = document.getElementById('mensajeAccion').style.display = 'block';
         mensajeAccion = document.getElementById('mensajeAccion').innerHTML = 'Haz perdido 💀';
         mensajeSelelcionAtaques = document.getElementById('mensajeSeleccionAtaque').style.display= 'none';
