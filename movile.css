@@ -1,27 +1,33 @@
 /*importaciones de fuentes*/
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bungee+Spice&family=Genos:wght@100&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bungee+Spice&family=Genos:wght@100&display=swap');
+
 /*                       */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --blanco: #fff;
-    --morado-con-transparencia-01:rgba(75, 0, 130, 0.1);
-    --morado-con-transparencia-03:rgba(75, 0, 130, 0.3);
-    --morado-con-transparencia-05:rgba(75, 0, 130, 0.5);
-    --morado-con-transparencia-06:rgba(75, 0, 130, 0.6);
-    --negro-con-transparencia-05:rgba(0, 0, 0, 0.5);
-    --negro-sin-transparencia:rgba(0, 0, 0);
+    --morado-con-transparencia-01: rgba(75, 0, 130, 0.1);
+    --morado-con-transparencia-02: rgba(75, 0, 130, 0.2);
+    --morado-con-transparencia-03: rgba(75, 0, 130, 0.3);
+    --morado-con-transparencia-04: rgba(75, 0, 130, 0.4);
+    --morado-con-transparencia-05: rgba(75, 0, 130, 0.5);
+    --morado-con-transparencia-06: rgba(75, 0, 130, 0.6);
+    --azul-con-transparencia-04: rgba(33, 34, 106, 0.442);
+    --negro-con-transparencia-05: rgba(0, 0, 0, 0.5);
+    --negro-sin-transparencia: rgba(0, 0, 0);
     --color-oro-trasparencia-07: rgb(255, 215, 0, 0.7);
-    --azul-trasnparencia-08:rgba(148, 178, 230, 0.8);
-    --verde-con-trasparencia-05:rgb(127, 255, 212, 0.5);
-    --verde-con-trasparencia-06:rgb(127, 255, 212, 0.6);
-    --rojo-con-trasnparencia-05:rgba(245, 56, 46, 0.5);
-    --rojo-con-trasnparencia-06:rgba(245, 56, 46, 0.6);
+    --azul-trasnparencia-08: rgba(148, 178, 230, 0.8);
+    --verde-con-trasparencia-05: rgb(127, 255, 212, 0.5);
+    --verde-con-trasparencia-06: rgb(127, 255, 212, 0.6);
+    --rojo-con-trasnparencia-05: rgba(245, 56, 46, 0.5);
+    --rojo-con-trasnparencia-06: rgba(245, 56, 46, 0.6);
 }
+
 /*body*/
 body {
     background-image: url(./Petserkers/arena.webp);
@@ -30,6 +36,7 @@ body {
     background-size: cover;
     height: 100vh;
 }
+
 /*contenedor titulo*/
 .contenedor-titulo-principal {
     display: flex;
@@ -38,14 +45,10 @@ body {
     font-family: 'Poppins', sans-serif;
     height: 10%;
     width: 100%;
-    color: var(--blanco);
-    padding-top: 10px;
+    padding-top: 5%;
     background-color: var(--morado-con-trasparencia-03);
 }
-/*main*/
-main {
-    height: 85%;
-}
+
 /*titulo*/
 .titulo {
     text-align: center;
@@ -62,17 +65,26 @@ main {
     background-clip: text;
     animation: move 10s linear infinite;
 }
-@keyframes move{
+
+@keyframes move {
     0% {
         background-position: 0 0;
     }
+
     50% {
         background-position: 400% 0;
     }
+
     100% {
         background-position: 0 0;
     }
 }
+
+/*main*/
+main {
+    height: 85%;
+}
+
 /*contenedor subtitulo cartas y boton*/
 #seleccion-Petserker {
     margin: 10px 10px 0px 10px;
@@ -83,6 +95,7 @@ main {
     height: 95%;
     border: 0;
 }
+
 /*contenedor de subtitulo cards y boton*/
 .container-sub-cards-btn {
     background-color: var(--negro-con-transparencia-05);
@@ -98,6 +111,7 @@ main {
     align-items: center;
     justify-content: space-around;
 }
+
 /*subtitulos */
 .subtiulo {
     font-size: 3.5vh;
@@ -115,6 +129,7 @@ main {
     animation: move 40s linear;
     margin-bottom: 5px;
 }
+
 /* conteneder cartas*/
 .container-cards {
     width: 100%;
@@ -124,6 +139,7 @@ main {
     overflow: scroll;
     scroll-snap-type: x mandatory;
 }
+
 /*labels cartas de petserkers*/
 .card {
     height: 93%;
@@ -133,6 +149,7 @@ main {
     border-radius: 20px;
     margin: 10px;
 }
+
 /*imagenes delos petserkers*/
 .container-cards img {
     width: 68vw;
@@ -143,6 +160,7 @@ main {
     border-radius: 5px;
     scroll-snap-align: center;
 }
+
 /*Nombre de los petserkers*/
 .container-cards p {
     margin-bottom: 8px;
@@ -150,12 +168,14 @@ main {
     text-align: center;
     text-transform: uppercase;
     font-size: 28px;
-    color:var(--color-oro-trasparencia-07);
+    color: var(--color-oro-trasparencia-07);
 }
+
 /*inputs de cartas*/
 input {
     display: none;
 }
+
 /*estilos de botno de señleccionar petserker*/
 .btn-petserker {
     border: 0;
@@ -171,6 +191,7 @@ input {
     background-size: 800%;
     animation: move 25s linear infinite;
 }
+
 .btn-petserker span {
     background-color: var(--negro-sin-transparencia);
     padding: 16px 24px;
@@ -180,15 +201,18 @@ input {
     text-transform: uppercase;
     font-family: 'Black Ops One';
 }
+
 .btn-petserker:active span {
     background: none;
 }
+
 /* contenedor de interfaz de ataques*/
 #sleccion-ataque {
     align-items: center;
     flex-direction: column;
     height: 100%;
 }
+
 /*contenedor de barra de vida de jugador y enemigo*/
 .contenedor-vidas-jugador-enemigo {
     height: 4%;
@@ -197,6 +221,7 @@ input {
     justify-content: center;
     background-color: var(--morado-con-trasparencia-03);
 }
+
 /*barra vida jugador */
 .contenedor-barra {
     height: 100%;
@@ -205,6 +230,7 @@ input {
     align-items: center;
     justify-content: space-evenly;
 }
+
 /*logo de vs espadas*/
 .logo-versus {
     width: 20%;
@@ -214,6 +240,7 @@ input {
     background-size: cover;
     border-radius: 50%;
 }
+
 /*icono corazon*/
 .icono-corazon {
     height: 30px;
@@ -223,6 +250,7 @@ input {
     background-position: center;
     background-size: cover;
 }
+
 /*barra de vida*/
 .barra {
     width: 60%;
@@ -232,22 +260,26 @@ input {
     display: flex;
     flex-direction: row-reverse;
 }
+
 /*vida de enemigo*/
 #vidaPetserkerEnemigo {
     width: 100%;
     height: 100%;
-    background-color:var(--rojo-con-trasnparencia-06) ;
+    background-color: var(--rojo-con-trasnparencia-06);
     transition: .3s;
 }
+
 /*vida jugador*/
 #barra {
     flex-direction: row;
 }
+
 #vidaPetserkerJugador {
     width: 100%;
     height: 100%;
     background-color: var(--verde-con-trasparencia-05);
 }
+
 /*contenedor imagenes de petserkers elegidos*/
 .contenedor-petserker-jugador-enemigo {
     margin-top: 10px;
@@ -258,8 +290,10 @@ input {
     height: 25%;
     background-color: var(--negro-con-transparencia-05);
 }
+
 /*contenedores de luchadores*/
-#PetserkerJugador,#PetserkerEnemiga {
+#PetserkerJugador,
+#PetserkerEnemiga {
     background-color: var(--negro-sin-transparencia);
     background-repeat: no-repeat;
     background-position: center;
@@ -267,6 +301,7 @@ input {
     height: 90%;
     border-bottom: 10px;
 }
+
 .box {
     height: 95%;
     width: 40%;
@@ -275,6 +310,7 @@ input {
     justify-content: center;
     text-align: center;
 }
+
 .nombrePetserkersCombatientes {
     padding-top: 5px;
     background-color: var(--negro-sin-transparencia);
@@ -283,6 +319,7 @@ input {
     text-transform: uppercase;
     font-size: 20px;
 }
+
 /*vs*/
 .versus {
     height: 40px;
@@ -293,6 +330,7 @@ input {
     background-size: cover;
     margin: 0 5px 0 5px;
 }
+
 /*imagen inicial*/
 #inicioJuego {
     background-repeat: no-repeat;
@@ -302,6 +340,7 @@ input {
     width: 98%;
     border-radius: 10px;
 }
+
 /*Mensajes*/
 .mensajesAtaques {
     margin-top: 1%;
@@ -313,6 +352,7 @@ input {
     justify-content: center;
     align-items: center;
 }
+
 #containerPowers {
     height: 100%;
     width: 100%;
@@ -323,8 +363,10 @@ input {
     justify-content: space-around;
     align-items: center;
 }
+
 /*contenedores imagenes de ataques*/
-.boxPower, .boxPowertwo {
+.boxPower,
+.boxPowertwo {
     height: 90%;
     width: 47%;
     border-radius: 10px;
@@ -332,6 +374,7 @@ input {
     background-position: center;
     background-size: cover;
 }
+
 #resultado {
     background-repeat: no-repeat;
     background-position: center;
@@ -340,15 +383,34 @@ input {
     width: 98%;
     border-radius: 10px;
 }
+
 /*mensaje subtitulo*/
-#contenedor-subtitulo{ margin-top: 2px;}
-#contenedor-subtitulo, .contenedor-subtitulo {
+#contenedor-subtitulo {
+    margin-top: 2px;
+}
+
+#contenedor-subtitulo,
+.contenedor-subtitulo {
     background-color: var(--morado-con-transparencia-06);
     width: 100%;
     height: 8%;
     text-align: center;
     padding: 5px;
 }
+
+/*contenedor botones de atque*/
+.contenedor-de-ataques {
+    display: flex;
+    justify-content: space-around;
+    height: 8%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contenedor-de-ataques button img {
+    width: 15vw;
+}
+
 /*botones de ataques*/
 .btn-ataques {
     background-color: var(--morado-con-transparencia-01);
@@ -358,17 +420,16 @@ input {
     font-size: 44px;
     position: relative;
     margin: 0 5px 0 5px;
-    width: 60px;
 }
+
 /*pseudoelemento botones de atque*/
-.contenedor-de-ataques{margin-top:10px;}
 .contenedor-de-ataques button::before {
     content: "";
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 16vw;
+    height: 16vw;
     top: 0;
-    left: -5px;
+    left: 0;
     z-index: -1;
     background: linear-gradient(45deg, #ff3f34, #ff6a00, #ff9f00, #ff6a00, #ff3f34);
     background-size: 800%;
@@ -376,20 +437,24 @@ input {
     animation: move 18s linear infinite;
     border-radius: 50%;
 }
+
 .contenedor-de-ataques button:nth-of-type(2)::before {
     background: linear-gradient(45deg, rgb(0, 162, 255), blue, rgb(20, 36, 255), rgb(0, 162, 255), blue, rgb(20, 36, 255));
     background-size: 800%;
 }
+
 .contenedor-de-ataques button:nth-of-type(3)::before {
     background: linear-gradient(45deg, rgb(0, 128, 68), rgb(0, 158, 96), rgb(4, 180, 95),
             rgb(0, 128, 68), rgb(0, 158, 96), rgb(4, 180, 95));
     background-size: 800%;
 }
+
 .contenedor-de-ataques button:nth-of-type(4)::before {
     background: linear-gradient(45deg, rgba(255, 255, 255, 1), rgba(240, 250, 255, 1), rgba(230, 245, 255, 1),
             rgba(240, 250, 255, 1), rgba(255, 255, 255, 1), rgba(240, 250, 255, 1), rgba(230, 245, 255, 1));
     background-size: 800%;
 }
+
 /*boton de reinicio*/
 #reiniciar {
     margin-top: 10px;
@@ -402,10 +467,11 @@ input {
     right: 0;
     bottom: 0;
 }
+
 footer {
     background: var(--morado-con-transparencia-03);
     color: white;
-    height:5% ;
+    height: 5%;
     display: flex;
     align-items: center;
     justify-content: end;

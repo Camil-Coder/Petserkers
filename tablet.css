@@ -1,0 +1,82 @@
+@media (min-width: 600px) {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .contenedor-titulo-principal {
+        height: 10%;
+        margin-bottom: 20px;
+    }
+
+    .titulo {
+        font-size: 80px;
+    }
+
+    main {
+        height: 80%;
+        margin-bottom: 1%;
+    }
+
+    #seleccion-Petserker {
+        height: auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container-sub-cards-btn {
+        height: 80vh;
+        width: 100%;
+        border: 0;
+        justify-content: center;
+    }
+
+    .subtiulo {
+        font-size: 45px;
+    }
+
+    .container-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: scroll;
+        scroll-snap-type: y mandatory;
+        height: 600px;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        height: 280px;
+        width: 250px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-color: var(--morado-con-transparencia-01);
+    }
+
+    .card p {
+        color: var(--blanco);
+    }
+
+    .card:hover p{
+        color: var(--color-oro-trasparencia-07);
+    }
+    
+    .card:hover{
+        background-color: var(--morado-con-transparencia-06);
+    }
+
+    .card img {
+        height: 200px;
+        width: 200px;
+    }
+
+
+
+    footer{
+        height: 10%;
+        padding-right: 20px;
+    }
+}

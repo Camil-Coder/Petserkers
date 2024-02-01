@@ -149,7 +149,7 @@ function sleccionarPetserkerJugador() {
     }
     else if (robernik.checked) {
         nombrePetserkerjugador.innerHTML = listaPetserkers(5);
-        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(5)}.png')`;
+        petserkerJugador.style.backgroundImage = `url('./Petserkers/${listaPetserkers(5)}.webp')`;
         estadoSeleccionPetserker = true;
     } else {
         return (
