@@ -256,7 +256,7 @@ input {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 35%;
+    height: 25%;
     background-color: var(--negro-con-transparencia-05);
 }
 /*contenedores de luchadores*/
@@ -306,7 +306,7 @@ input {
 /*Mensajes*/
 .mensajesAtaques {
     margin-top: 1%;
-    height: 35%;
+    height: 30%;
     width: 94%;
     color: var(--blanco);
     padding: 1px;
