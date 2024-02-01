@@ -29,7 +29,6 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
-    overflow:hidden;
 }
 /*contenedor titulo*/
 .contenedor-titulo-principal {
