@@ -1,20 +1,20 @@
 @media (min-width: 600px) {
     body {
         height: 100vh;
-        overflow: hidden;
     }
 
     .contenedor-titulo-principal {
         height: 10%;
         margin-bottom: 20px;
+        padding-top: 20px;
     }
 
     .titulo {
-        font-size: 80px;
+        font-size: 50px;
     }
 
     main {
-        height: 80%;
+        height: 80vh;
         margin-bottom: 1%;
     }
 
@@ -42,8 +42,9 @@
         justify-content: center;
         overflow: scroll;
         scroll-snap-type: y mandatory;
-        height: 600px;
-        margin-bottom: 10px;
+        width: 95%;
+        margin:0 0 0 0;
+        max-height: 1000px;
     }
 
     .card {
@@ -69,8 +70,8 @@
     }
 
     .card img {
-        height: 200px;
-        width: 200px;
+        height: 20vh;
+        width: 20vh;
     }
 
 
