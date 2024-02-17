@@ -158,7 +158,7 @@ function sleccionarPetserkerJugador() {
         );
     };
 
-    sectionSeleccionAtaque = document.getElementById('sleccion-ataque').style.display = 'flex';
+    sectionSeleccionAtaque = document.getElementById('seleccion-ataque').style.display = 'flex';
     sectionSeleccionPet = document.getElementById('seleccion-Petserker').style.display = 'none';
     imageInicioJuego = document.getElementById('inicioJuego').style.display = 'flex';
     imageInicioJuego = document.getElementById('inicioJuego').style.backgroundImage = `url(./Petserkers/${listaArenas(aleatorio(7, 1))}.webp)`;

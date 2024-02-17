@@ -1,12 +1,12 @@
 @media (min-width: 600px) {
     body {
-        height: 100vh;
+        height: auto;
     }
 
     .contenedor-titulo-principal {
-        height: 10%;
+        height: auto;
         margin-bottom: 20px;
-        padding-top: 20px;
+        padding-top: 0px;
     }
 
     .titulo {
@@ -14,7 +14,7 @@
     }
 
     main {
-        height: 80vh;
+        height: 900px;
         margin-bottom: 1%;
     }
 
@@ -26,14 +26,14 @@
     }
 
     .container-sub-cards-btn {
-        height: 80vh;
+        height: 70vh;
         width: 100%;
         border: 0;
         justify-content: center;
     }
 
     .subtiulo {
-        font-size: 45px;
+        font-size: 25px;
     }
 
     .container-cards {
@@ -43,8 +43,7 @@
         overflow: scroll;
         scroll-snap-type: y mandatory;
         width: 95%;
-        margin:0 0 0 0;
-        max-height: 1000px;
+        margin: 0 0 11px 0;
     }
 
     .card {
@@ -61,23 +60,64 @@
         color: var(--blanco);
     }
 
-    .card:hover p{
+    .card:hover p {
         color: var(--color-oro-trasparencia-07);
     }
-    
-    .card:hover{
+
+    .card:hover {
         background-color: var(--morado-con-transparencia-06);
     }
 
     .card img {
-        height: 20vh;
-        width: 20vh;
+        height: 25vh;
+        width: 25vh;
     }
 
+    .contenedor-vidas-jugador-enemigo{
+        height: auto;
+    }
 
+    .contenedor-petserker-jugador-enemigo {
+        height: auto;
+        width: auto;
+    }
 
-    footer{
+    #PetserkerJugador,
+    #PetserkerEnemiga {
+        height: 150px;
+        width: 100%;
+    }
+
+    .box{
+        height: 100%;
+        width: 172px;
+    }
+
+    .mensajesAtaques { 
+        height: 200px;
+        width: 90%;
+    }
+
+    footer {
         height: 10%;
         padding-right: 20px;
+    }
+
+    #seleccion-ataque{
+        height: auto;
+    }
+    #iniciarJuego{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .contenedor-de-ataques{
+        justify-content: space-evenly ;
+    }
+    .contenedor-de-ataques button::before {
+        width: 60px;
+        height: 60px;
+    }
+    .contenedor-de-ataques button img {
+        width: 60px;
     }
 }

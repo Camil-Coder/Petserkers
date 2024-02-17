@@ -207,10 +207,10 @@ input {
 }
 
 /* contenedor de interfaz de ataques*/
-#sleccion-ataque {
+.seleccion-ataque {
     align-items: center;
     flex-direction: column;
-    height: 100%;
+    height: 88vh;
 }
 
 /*contenedor de barra de vida de jugador y enemigo*/
@@ -233,7 +233,7 @@ input {
 
 /*logo de vs espadas*/
 .logo-versus {
-    width: 20%;
+    width: 60px;
     background-image: url(./Petserkers/espada.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -408,7 +408,7 @@ input {
 }
 
 .contenedor-de-ataques button img {
-    width: 15vw;
+    width: 8vh;
 }
 
 /*botones de ataques*/
@@ -426,8 +426,8 @@ input {
 .contenedor-de-ataques button::before {
     content: "";
     position: absolute;
-    width: 16vw;
-    height: 16vw;
+    width: 9vh;
+    height: 9vh;
     top: 0;
     left: 0;
     z-index: -1;
