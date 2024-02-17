@@ -8,7 +8,7 @@
 	</a>
 </div>
 <hr>
-<h2>Un Juego para celular 📱 increíble para el</h2> 
+<h2>Un Juego increíble para celular 📱</h2> 
 <a href="https://platzi.com/cursos/programacion-basica/">curso de gratis de programacion basica<strong>Platzi</strong> 💚</a>
 <hr>
 > Bienvenido a Petserkers, un emocionante juego de estrategia basado en la clásica mecánica de piedra, papel o tijera, llevada a una experiencia de combate más compleja y llena de sorpresas. En Petserkers, los jugadores se sumergirán en un mundo lleno de criaturas únicas y emocionantes duelos, donde la elección de tu mascota y la estrategia son clave para la victoria..
